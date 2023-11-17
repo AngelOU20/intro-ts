@@ -40,5 +40,13 @@ type State = [string, (name: string) => void];
 // const [hero, setHero] = useState('Thor'); //? <-- [hero, setHero] seria una tupla
 
 // Otro caso, seria lo colores RGB
-type RGB = [number, number, number]; //? Lo tipamos como una tupla
+type RGB = readonly [number, number, number]; //? Lo tipamos como una tupla
 const rgb: RGB = [255, 255, 0]; // 0 - 255
+const white: RGB = [255, 255, 255]; // 0 - 255
+
+//* PROBLEMA DE TUPLES
+//Note: Puedes agregar otro elemento al arreglo y rompe con la longitud que le diste
+// white.push(2);
+
+// Formas de resolverlo
+//* WITH READONLY
