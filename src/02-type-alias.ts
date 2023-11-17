@@ -1,4 +1,4 @@
-// TYPE ALIAS
+//* TYPE ALIAS
 //Note: Los types alias siempre se escriben en PascalCase
 type Hero = {
   name: string;
